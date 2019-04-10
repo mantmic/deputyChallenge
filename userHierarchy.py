@@ -54,20 +54,3 @@ def getSubOrdinates(userId):
     #filter function
     def userRoleFilter(u): return u.get('Role') in subRoleId
     return(filter(userRoleFilter,users))
-
-
-#Actual test
-import exampleData
-
-setRoles(exampleData.roles)
-setUsers(exampleData.users)
-
-#Test case 1
-print("Test case 1 - Subordinats of user 3")
-test1 = getSubOrdinates(3)
-print(test1)
-
-#Test case 2
-print("Test case 2 - Subordinats of user 1")
-test2 = getSubOrdinates(1)
-print(test2)
